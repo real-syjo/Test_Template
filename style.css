@@ -298,7 +298,6 @@ body {
   background-color: var(--color-grey);
 }
 .skill__value {
-  width: 50%;
   height: 3px;
   background-color: var(--color-orange);
 }
