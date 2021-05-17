@@ -139,6 +139,7 @@ body {
   color: var(--color-white);
   padding: 16px;
   transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
 }
 .navbar__logo{
   font-size: 30px;
@@ -164,7 +165,7 @@ body {
 }
 .navbar__toggle-btn {
   position: absolute;
-  top: 38px;
+  top: 24px;
   right: 32px;
   font-size: 24px;
   color: var(--color-white);
@@ -430,5 +431,8 @@ body {
   }
   .project {
     flex-grow:1;
+    width: 300px;
+    height: 300px;
   }
+ 
 }
