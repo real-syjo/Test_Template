@@ -155,12 +155,12 @@ body {
  padding: 8px 12px;
  margin: 0px 4px 0px 4px;
  cursor: pointer;
+ border: 1px solid transparent;
  border-radius: var(--size-border-radius);
 }
-.navbar__menu__item.active {
- border: 1px solid var(--color-white);
-}
+
 .navbar__menu__item:hover {
+  border: 1px solid var(--color-white);
   background-color:#489bd2;
 }
 .navbar__toggle-btn {
@@ -450,5 +450,7 @@ body {
     width: 300px;
     height: 300px;
   }
- 
+  .arrow-up{
+    right: 5px;
+  }
 }
