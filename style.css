@@ -178,7 +178,7 @@ body {
   padding: 40px;
   padding-top: 120px;
   text-align: center;
-  height: 941px;
+  height: 924px;
 }
 .home__avatar {
   width: 250px;
@@ -393,6 +393,7 @@ body {
   transform: scale(1.1);
   color:var(--color-orange);
 }
+
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {

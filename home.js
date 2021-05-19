@@ -1,10 +1,9 @@
 'use strict';
 
 //Make navbar transparent when it is on the top
+const navbar = document.querySelector('#navbar');
+const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', ()=>{
-    const navbar = document.querySelector('#navbar');
-    const navbarHeight = navbar.getBoundingClientRect().height;
-
     if(window.scrollY >navbarHeight){
         navbar.classList.add('navbar--dark');
     }else{
@@ -22,10 +21,22 @@ navbarMenu.addEventListener('click',(event)=>{
 		return;
 	}
 
-	const scrollTo = document.querySelector(`${link}`);
-    scrollTo.scrollIntoView({behavior: 'smooth'});
+    scrollIntoView(link);
 });
 
+//contact me 
+const homeContackBtn = document.querySelector('.home__contact');
+homeContackBtn.addEventListener('click', ()=>{
+	scrollIntoView('#contact');
+})
+
+function scrollIntoView(selector){
+	const scrollTo = document.querySelector(selector);
+	scrollTo.scrollIntoView({behavior: 'smooth'});
+}
+
+
+// Home comment
 const elts = {
 	text1: document.getElementById("text1"),
 	text2: document.getElementById("text2")
