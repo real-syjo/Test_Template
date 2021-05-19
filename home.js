@@ -36,6 +36,23 @@ function scrollIntoView(selector){
 }
 
 
+// Show "arrow-up" button when scrolling down 
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', ()=>{
+	console.log(navbarHeight);
+	if(window.scrollY> navbarHeight / 2){
+		arrowUp.classList.add('visible');
+	}else{
+		arrowUp.classList.remove('visible');
+	}
+})
+
+// Arrow-up to home
+arrowUp.addEventListener('click',()=>{
+	scrollIntoView('#home');
+})
+
+
 // Home comment
 const elts = {
 	text1: document.getElementById("text1"),

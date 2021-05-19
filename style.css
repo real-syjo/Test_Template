@@ -394,6 +394,21 @@ body {
   color:var(--color-orange);
 }
 
+/* scroll */
+.arrow-up{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 50px; 
+  color:#fe918d;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease-in;
+}
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
