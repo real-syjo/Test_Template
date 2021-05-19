@@ -9,6 +9,7 @@ document.addEventListener('scroll', ()=>{
     }else{
         navbar.classList.remove('navbar--dark');
     }
+	navbarMenu.classList.remove('open');
 })
 
 //Handle scrolling when tapping on the navbar menu
@@ -16,17 +17,21 @@ const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click',(event)=>{
     const target = event.target;
 	const link = target.dataset.link;
-	
 	if(link == null){
 		return;
 	}
-
     scrollIntoView(link);
+});
+
+//Navbar toggle button for small screen 
+const navbarToggleBtn =  document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+	navbarMenu.classList.toggle('open');
 });
 
 //contact me 
 const homeContackBtn = document.querySelector('.home__contact');
-homeContackBtn.addEventListener('click', ()=>{
+homeContackBtn.addEventListener('click', () => {
 	scrollIntoView('#contact');
 })
 
@@ -39,7 +44,6 @@ function scrollIntoView(selector){
 // Show "arrow-up" button when scrolling down 
 const arrowUp = document.querySelector('.arrow-up');
 document.addEventListener('scroll', ()=>{
-	console.log(navbarHeight);
 	if(window.scrollY> navbarHeight / 2){
 		arrowUp.classList.add('visible');
 	}else{

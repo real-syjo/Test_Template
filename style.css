@@ -359,16 +359,17 @@ body {
   border-radius: 15% 15% 15% 15% ;
 }
 .project__description h3 {
-  color: var(--color-white);
+  color: #feb546;
 }
 .project__description h3:after {
   content: '';
   display: block;
   position: relative;
   left: 50%;
-  width: 25px;
+  width: 50px;
   height: 2px;
-  margin-left: -12px;
+  transform: translateX(-25%);
+  margin-left: -10px;
   background-color: var(--color-dark-white);
 }
 
@@ -429,12 +430,16 @@ body {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: #489bd2;
   }
   .navbar__menu {
     flex-direction: column;
-    text-align: 100%;
+    text-align: center;
     width: 100%;
     display: none;
+  }
+  .navbar__menu.open{
+    display:block;
   }
   .about__majors {
     flex-direction: column;
