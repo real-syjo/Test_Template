@@ -66,7 +66,6 @@ arrowUp.addEventListener('click',()=>{
 	scrollIntoView('#home');
 })
 
-
 // Home comment
 const elts = {
 	text1: document.getElementById("text1"),
