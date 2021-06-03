@@ -31,7 +31,6 @@ body {
   color: var(--color-white);
 }
 
-
 :root {
     /* Color */
     --color-white: #ffffff;
@@ -186,7 +185,6 @@ body {
   border-radius: 50%;
   border: 2px solid var(--color-white);
 }
-
 .home__description {
   color: var(--color-white);
 }
@@ -266,8 +264,7 @@ body {
   font-size: var(--font-micro);
 }
 
- /* skill */
-
+ /* Skill */
  #skills{
   background-color: var(--color-yellow);
   color: var(--color-light-white);
@@ -313,12 +310,11 @@ body {
   padding: 20px;
 }
 
-/* work */
+/* Work */
 .work__projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
 }
 .project {
   position: relative;
@@ -395,7 +391,7 @@ body {
   color:var(--color-orange);
 }
 
-/* scroll */
+/* Scroll */
 .arrow-up{
   position: fixed;
   bottom: 50px;
@@ -460,6 +456,7 @@ body {
   }
 }
 
+/* Modal */
 .modal {
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
@@ -479,6 +476,7 @@ body {
 	padding: 20px;
 	border: 1px solid #888;
 	width: 50%; /* Could be more or less, depending on screen size */
+  border-radius: 2%;
 }
 /* The Close Button */
 .close {
@@ -494,14 +492,12 @@ body {
 	cursor: pointer;
 }
 
-
-/* 슬라이드 */
+/* Slide */
 * {
   margin: 0;
   padding: 0;
   box-sizing:border-box;
 }
-
 /* Slideshow container */
 .slideshow-container {
   max-width: 1200px;
@@ -512,12 +508,10 @@ body {
 .slideshow-container .mySlides img {
   height: 750px;
 }
-
 /* Hide the images by default */
 .mySlides {
   display: none;
 }
-
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -533,18 +527,15 @@ body {
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
-
 /* Caption text */
 .text {
   color: #f2f2f2;
@@ -556,3 +547,59 @@ body {
   text-align: center;
 }
 
+/* Mail me */
+.modal_wrap{
+  display: none;
+  width: 570px;
+  height: 517px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  margin: -250px 0 0 -250px;
+  background:#eee;
+  z-index: 2;
+  border-radius: 2%;
+  background:url(imgs/modal.jpg);
+}
+.black_bg{
+  display: none;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0,0, 0.5);
+  top:0;
+  left: 0;
+  z-index: 1;
+}
+.modal_close{
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  right: 0;
+}
+.modal_close> a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background:url(https://img.icons8.com/metro/26/000000/close-window.png);
+  text-indent: -9999px;
+}
+.mail_content{
+  display: grid;
+  width: 90%;
+  margin: auto;
+  color: var(--color-grey);
+}
+.email{
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #008CBA;
+}

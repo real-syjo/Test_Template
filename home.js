@@ -32,7 +32,17 @@ navbarToggleBtn.addEventListener('click', () => {
 //contact me 
 const homeContackBtn = document.querySelector('.home__contact');
 homeContackBtn.addEventListener('click', () => {
-	scrollIntoView('#contact');
+	function onClick() {
+        document.querySelector('.modal_wrap').style.display ='block';
+        document.querySelector('.black_bg').style.display ='block';
+    }   
+    function offClick() {
+        document.querySelector('.modal_wrap').style.display ='none';
+        document.querySelector('.black_bg').style.display ='none';
+    }
+ 
+    document.getElementById('modal_btn').addEventListener('click', onClick);
+    document.querySelector('.modal_close').addEventListener('click', offClick);
 })
 
 function scrollIntoView(selector){
@@ -150,8 +160,26 @@ function animate() {
 animate();
 
 
+//Email Modal
+window.onload = function() {
+ 
+    function onClick() {
+        document.querySelector('.modal_wrap').style.display ='block';
+        document.querySelector('.black_bg').style.display ='block';
+    }   
+    function offClick() {
+        document.querySelector('.modal_wrap').style.display ='none';
+        document.querySelector('.black_bg').style.display ='none';
+    }
+ 
+    document.getElementById('modal_btn').addEventListener('click', onClick);
+    document.querySelector('.modal_close').addEventListener('click', offClick);
+ 
+};
 
-// Modal
+
+
+// Modals
 var modals = document.getElementsByClassName("modal");
 var btns = document.getElementsByClassName("btn");
 var spanes = document.getElementsByClassName("close");
@@ -233,5 +261,29 @@ function showSlides(n) {
   }
 
   slides[n].style.display = "block";
-  dots[n].className += " active";
+ 
 }
+
+// Mail me
+$(document).ready(function(){
+	emailjs.init("user_eh82MwoYUyodSAT0Wd9WA");		
+	$('input[name=submit]').click(function(){       	 
+	  
+	  var templateParams = {	
+			name: $('input[name=name]').val(),
+			phone: $('input[name=phone]').val(), 
+			email : $('input[name=email]').val(),
+			message : $('textarea[name=message]').val()
+					   };
+
+	 emailjs.send('service_7sxqadn', 'template_slx1ukm', templateParams)
+			 .then(function(response) {
+				alert("메일이 정상적으로 발송되었습니다. 빠른시일 내에 연락드리겠습니다.");
+			 }, function(error) {
+				alert("메일 발송 실패!");
+			 });
+		});
+	
+ 	 });
+
+

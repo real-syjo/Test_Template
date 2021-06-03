@@ -15,12 +15,12 @@
     <link rel="stylesheet" href="style.css"/>
     <script src="home.js" defer></script>
 
-
-  
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"> </script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body>
-    <nav id="navbar">
+     <nav id="navbar">
         <div class="navbar__logo">
             <i class="fas fa-apple-alt"></i>
             <a href="index.html">SY's</a>
@@ -49,7 +49,7 @@
             <span id="text2"></span>
      
         <br/><br/><br/><br/><br/>
-        <button class="home__contact">Mail Me</button>
+        <button class="home__contact" id="modal_btn">Mail Me</button>
     </section>
 
     <section id="about" class="section">
@@ -295,7 +295,6 @@
                 </div> 
 
                 <div id ="project" class="btn">  
-                    <!-- <a href="https://drive.google.com/file/d/1t0pGumoirjzFWszKxOR7VJXs3VSXqDHT/view?usp=sharing"  -->
                     <a href="javascript:void(0);"
                         class="project">
                         <img src="imgs/comma1.PNG" 
@@ -314,7 +313,7 @@
 
     <section id= "contact" class="section">
         <h1 class="contact__title">Let's talk</h1>
-        <h2 class="contact__email">@gmail.com</h2>
+        <h2 class="contact__email">csy815kr@gmail.com</h2>
         <div class="contact__links">
             <a href="https://github.com/real-syjo" target="_black">
                 <i class="fab fa-github"></i>
@@ -330,8 +329,7 @@
         <i class="fas fa-arrow-circle-up"></i>
     </button>
 
-
-   
+  
     <!-- AppMarket -->
     <div class="modal">
       <div class="modal-content">
@@ -401,6 +399,24 @@
           <br/><br/><br/><br/>
         </div>
       </div>
+
+    <!-- Mail Me Modal -->
+    <div class="black_bg"></div>
+    <div class="modal_wrap">
+        <div class="modal_close"><a href="#">close</a></div>
+        <div class="mail_content">
+            <h2>&nbsp; <i class="fas fa-angle-double-right"></i> Send Mail</h2>
+            <label for="">수신받으실 메일주소</label>
+            <input type="text" name="name" placeholder="Mail Address">
+            <label for="">연락받으실 연락처</label>
+            <input type="text" name="email" placeholder="Phone number">
+            <label for="">제목</label>
+            <input type="text" name="phone" placeholder="Title">
+            <label for="">내용</label>
+            <textarea name="message" rows="5" placeholder="Content"></textarea><br>
+            <input type="button" name="submit" class="email" value="Send Mail"/>
+        </div>
+    <div>
 </body>
 </html>
 
