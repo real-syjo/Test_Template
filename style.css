@@ -4,7 +4,9 @@
 body {
 	margin: 0px;
 }
-
+a{
+  cursor: pointer;
+}
 #text {
 	/* Center the text in the viewport. */
 	position: absolute;
@@ -470,13 +472,16 @@ body {
 	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 /* Modal Content/Box */
-.modal-content {
+.modal_content {
 	background-color: #fefefe;
 	margin: 3% auto; /* 15% from the top and centered */
 	padding: 20px;
 	border: 1px solid #888;
 	width: 50%; /* Could be more or less, depending on screen size */
   border-radius: 2%;
+}
+.modal_content {
+
 }
 /* The Close Button */
 .close {

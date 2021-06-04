@@ -278,6 +278,7 @@ $(document).ready(function(){
 	 emailjs.send('service_7sxqadn', 'template_slx1ukm', templateParams)
 			 .then(function(response) {
 				alert("메일이 정상적으로 발송되었습니다. 빠른시일 내에 연락드리겠습니다.");
+				location.reload();
 			 }, function(error) {
 				alert("메일 발송 실패!");
 			 });
