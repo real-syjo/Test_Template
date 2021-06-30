@@ -370,7 +370,9 @@ a{
   margin-left: -10px;
   background-color: var(--color-dark-white);
 }
-
+.addr:hover{
+color: #0015fa;
+}
 /* Contact */
 #contact {
   background-color: var(--color-blue);
@@ -480,9 +482,7 @@ a{
 	width: 50%; /* Could be more or less, depending on screen size */
   border-radius: 2%;
 }
-.modal_content {
 
-}
 /* The Close Button */
 .close {
 	color: #aaa;
