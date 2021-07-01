@@ -76,10 +76,10 @@ mode: document.getElementById("mode")
 // The strings to morph between. You can change these to anything you want!
 const texts = [
 	"Hi",
-	"My name is",
-	"SoyeonJO",
+	"I'm SoyeonJO",
 	"Developer",
-	"Click Me"
+	"Thank you for",
+	"visit my website"
 ];
 
 // Controls the speed of morphing.
@@ -139,7 +139,7 @@ function animate() {
 	
 	let newTime = new Date();
 	let shouldIncrementIndex = cooldown > 0;
-	let dt = (newTime - time) / 2000;
+	let dt = (newTime - time) / 3000;
 	time = newTime;
 	
 	cooldown -= dt;
