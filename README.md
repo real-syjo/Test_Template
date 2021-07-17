@@ -5,9 +5,9 @@
 #### 풀스택 개발자 조소연의 웹 포트폴리오 ver1 입니다. 
 
 + 개발툴
- + VSCODE
+  + VSCODE
 + 개발언어
- + javaScript  
- + css
- + html5
+  + javaScript  
+  + css
+  + html5
  
