@@ -133,157 +133,23 @@ function doCooldown() {
 	elts.text1.style.opacity = "0%";
 }
 
-// Animation loop, which is called every frame.
-function animate() {
-	requestAnimationFrame(animate);
-	
-	let newTime = new Date();
-	let shouldIncrementIndex = cooldown > 0;
-	let dt = (newTime - time) / 3000;
-	time = newTime;
-	
-	cooldown -= dt;
-	
-	if (cooldown <= 0) {
-		if (shouldIncrementIndex) {
-			textIndex++;
-		}
-		
-		doMorph();
-	} else {
-		doCooldown();
-	}
-}
 
-// Start the animation.
-animate();
+// #skills 감시
+const skillsSection = document.querySelector('#skills');
 
-
-//Email Modal
-window.onload = function() {
- 
-    function onClick() {
-        document.querySelector('.modal_wrap').style.display ='block';
-        document.querySelector('.black_bg').style.display ='block';
-    }   
-    function offClick() {
-        document.querySelector('.modal_wrap').style.display ='none';
-        document.querySelector('.black_bg').style.display ='none';
+const io = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view'); // 효과 실행
+      obs.unobserve(entry.target);           // 한 번만
     }
- 
-    document.getElementById('modal_btn').addEventListener('click', onClick);
-    document.querySelector('.modal_close').addEventListener('click', offClick);
- 
-};
+  });
+}, { threshold: 0.5 });
+
+io.observe(skillsSection);
 
 
 
-// Modals
-var modals = document.getElementsByClassName("modal");
-var btns = document.getElementsByClassName("btn");
-var spanes = document.getElementsByClassName("close");
-var funcs = [];
 
-function Modal(num) {
-  return function() {
-    btns[num].onclick =  function() {
-        modals[num].style.display = "block";
-        console.log(num);
-    };
-
-    spanes[num].onclick = function() {
-        modals[num].style.display = "none";
-    };
-  };
-}
- 
-for(var i = 0; i < btns.length; i++) {
-  funcs[i] = Modal(i);
-}
- 
-for(var j = 0; j < btns.length; j++) {
-  funcs[j]();
-}
-
-window.onclick = function(event) {
-  if (event.target.className == "modal") {
-      event.target.style.display = "none";
-  }
-};
-
-
-
-// Slide 
-var slideIndex = 0; //slide index
-// HTML 로드가 끝난 후 동작
-window.onload=function(){
-  showSlides(slideIndex);
-
-  // Auto Move Slide
-  var sec = 9000;
-  setInterval(function(){
-    slideIndex++;
-    showSlides(slideIndex);
-
-  }, sec);
-}
-// Next/previous controls
-function moveSlides(n) {
-  slideIndex = slideIndex + n
-  showSlides(slideIndex);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  slideIndex = n;
-  showSlides(slideIndex);
-}
-
-function showSlides(n) {
-
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  var size = slides.length;
-
-  if ((n+1) > size) {
-    slideIndex = 0; n = 0;
-  }else if (n < 0) {
-    slideIndex = (size-1);
-    n = (size-1);
-  }
-
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slides[n].style.display = "block";
- 
-}
-
-// Mail me
-$(document).ready(function(){
-	emailjs.init("user_eh82MwoYUyodSAT0Wd9WA");		
-	$('input[name=submit]').click(function(){       	 
-	  
-	  var templateParams = {	
-			name: $('input[name=name]').val(),
-			phone: $('input[name=phone]').val(), 
-			email : $('input[name=email]').val(),
-			message : $('textarea[name=message]').val()
-					   };
-
-	 emailjs.send('service_7sxqadn', 'template_slx1ukm', templateParams)
-			 .then(function(response) {
-				alert("메일이 정상적으로 발송되었습니다. 빠른시일 내에 연락드리겠습니다.");
-				location.reload();
-			 }, function(error) {
-				alert("메일 발송 실패!");
-			 });
-		});
-	
- 	 });
 
 
