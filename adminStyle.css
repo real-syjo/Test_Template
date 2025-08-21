@@ -143,8 +143,9 @@ a{
   transition: all var(--animation-duration) ease-in-out;
   z-index: 1;
 }
-.navbar__logo{
+.navbar__logo a{
   font-size: 30px;
+  color: #616161;
 }
 
 .navbar__menu {
@@ -156,12 +157,13 @@ a{
  cursor: pointer;
  border: 1px solid transparent;
  border-radius: var(--size-border-radius);
+ color: #616161;
 }
 
 .navbar__menu__item:hover {
   border: 1px solid var(--color-white);
-  background-color: #FFFF;
-  color: var(--color-dark-grey);       /* 글자색 흰색 */
+  background-color: var(--color-light-grey);
+  color: var(--color-white);       /* 글자색 흰색 */
   transform: scale(1.1);           /* 살짝 확대 */
 }
 .navbar__toggle-btn {
@@ -175,7 +177,6 @@ a{
 
 /* Home */
 #home {
-  background: url("imgs/mainPage.jpg") center/cover no-repeat;
   height: 924px;
   padding: 40px 40px 0 40px;
   text-align: center;
@@ -201,7 +202,6 @@ a{
 /* About */
 
 #about {
-  background: url("imgs/mainPage.jpg") center/cover no-repeat;
   height: 924px;
   padding: 40px 40px 0 40px;
   text-align: center;
@@ -368,23 +368,4 @@ article:hover{
  }
 
 
-
-/* Contact */
-#contact {
-  background-color: var(--color-blue);
-}
-.contact__title,
-.contact__email,
-
-.contact__title,
-.contact__email,
-.contact__links {
-  font-size: var(--font-micro);
-  margin: 6px 0;
-  transition: var(--animation-duration) ease-in;
-}
-.contact__links i:hover {
-  transform: scale(1.1);
-  color:var(--color-orange);
-}
 

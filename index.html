@@ -23,11 +23,10 @@
             Ocean Ai</a>
         </div>
             <ul class="navbar__menu">
-                <li class="navbar__menu__item active" data-link="#home">Home</li>
-                <li class="navbar__menu__item" data-link="#about">디자인스튜디오</li>
-                <li class="navbar__menu__item" data-link="#skills">금융데이터마트</li>
-                <li class="navbar__menu__item" data-link="#work">포트폴리오갤러리</li>
-                <li class="navbar__menu__item" data-link="#contact">작업관리자</li>
+                <a href="studio.html"><li class="navbar__menu__item" data-link="#about">디자인스튜디오</li></a>
+                <a href="mart.html"><li class="navbar__menu__item" data-link="#skills">금융데이터마트</li></a>
+                <a href="gallery.html"><li class="navbar__menu__item" data-link="#work">포트폴리오갤러리</li></a>
+                <a href="admin.html"><li class="navbar__menu__item" data-link="#contact">작업관리자</li></a>
             </ul>
         </div>
         <!-- Toggle button -->
@@ -37,11 +36,7 @@
     </nav>
 
     <section id="home">
-         
-    </section> 
-
-    <section id="about" class="section">
-        <div class="home-grid">
+         <div class="home-grid">
             <article class="card card--primary">
             <h4>새 캔버스에서 시작</h4>
              <a href="studio.html">처음 시작하기 </a>
@@ -54,14 +49,14 @@
 
             <article class="card">
             <h4>포트폴리오 갤러리</h4>
-            <a href="mart.html">나의 전략 갤러리</a>
+            <a href="gallery.html">나의 전략 갤러리</a>
             </article>
 
             <article class="card">
             <h4>작업관리자</h4>
-            <button class="chip">수시공시</button>
-            <button class="chip">사업보고서</button>
-            <button class="chip">경영공시</button>
+            <button class="chip"><a href="admin.html">관리자</a></button>
+            <button class="chip"><a href="admin.html">관리자</a></button>
+            <button class="chip"><a href="admin.html">관리자</a></button>
             </article>
 
             <article class="card">
@@ -81,11 +76,13 @@
             </div>
             </article>
         </div>
+    </section> 
+
+    <section id="about" class="section">
+        
     </section>
 
-    <section id="skills" class="section">
- 
-    </section>
+
 
     <section id= "contact" class="section">
 
